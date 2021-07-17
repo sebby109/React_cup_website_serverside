@@ -12,7 +12,7 @@ const port = process.env.PORT || 4002;
 app.use(express.json());
 app.use(cors());
 
-let items = [];
+let items = [{'name': 'cup1'}];
 
 
 app.get('/', (request, response) => {
@@ -42,6 +42,10 @@ app.post('/item', (request, response) => {
     let item = {name: name};
     items.push(item);
     response.send(`The item ${name} added.`);
+});
+
+app.get('/items', (request, response) => {
+    response.json(items);
 });
 
 // start server
