@@ -18,7 +18,7 @@ app.get('/', (request, response) => {
 app.get('/add/:a/:b', (request, response) =>{
     let a = request.params.a;
     let b = request.params.b;
-    let sum = a + b;
+    let sum = Number(a) + Number(b);
     response.send(`${a} + ${b} = ${sum}`);
 });
 
