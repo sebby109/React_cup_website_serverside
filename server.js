@@ -7,8 +7,12 @@ const { response } = require('express');
 // create the server
 const app = express();
 const port = process.env.PORT || 4002;
+
+// express.json() used to interpret for all in coming requests.
 app.use(express.json());
 app.use(cors());
+
+let items = [];
 
 
 app.get('/', (request, response) => {
@@ -20,6 +24,13 @@ app.get('/add/:a/:b', (request, response) =>{
     let b = request.params.b;
     let sum = Number(a) + Number(b);
     response.send(`${a} + ${b} = ${sum}`);
+});
+
+app.post('/item', (request, response) => {
+    let name = request.body.name;
+    let item = {item: item};
+    items.push(item);
+    response.send(`The item ${name} added.`);
 });
 
 // start server
