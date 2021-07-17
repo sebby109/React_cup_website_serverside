@@ -12,7 +12,7 @@ app.use(cors());
 
 
 app.get('/', (request, response) => {
-    response.send('<h1>welcome to imagequiz service</h1>');
+    response.send('<h1>Cups server side.</h1>');
 });
 
 // start server
