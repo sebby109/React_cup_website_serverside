@@ -15,5 +15,12 @@ app.get('/', (request, response) => {
     response.send('<h1>Cups server side.</h1>');
 });
 
+app.get('/add/:a/:b', (request, response) =>{
+    let a = request.params.a;
+    let b = request.params.b;
+    let sum = a + b;
+    response.send(`${a} + ${b} = ${sum}`);
+});
+
 // start server
 app.listen(port, () => console.log('Listening on port ' + port));
