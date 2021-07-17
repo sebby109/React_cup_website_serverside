@@ -30,7 +30,7 @@ app.get('/item/:name', (request, response) =>{
     let name = request.params.name;
     let item = items.find(x => x.name === name);
     if(item){
-        response.json(place);
+        response.json(item);
     }
     else{
         response.status(404).send(`Item ${name} not found.`);
