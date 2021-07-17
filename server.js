@@ -26,7 +26,7 @@ app.get('/add/:a/:b', (request, response) =>{
     response.send(`${a} + ${b} = ${sum}`);
 });
 
-app.get('/item/:name', (request, response) =>{
+app.get('/item/:name', (request, response) => {
     let name = request.params.name;
     let item = items.find(x => x.name === name);
     if(item){
