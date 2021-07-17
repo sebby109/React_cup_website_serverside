@@ -26,9 +26,20 @@ app.get('/add/:a/:b', (request, response) =>{
     response.send(`${a} + ${b} = ${sum}`);
 });
 
+app.get('/item/:name', (request, response) =>{
+    let name = request.params.name;
+    let item = items.find(x => x.name === name);
+    if(item){
+        response.json(place);
+    }
+    else{
+        response.status(404).send(`Item ${name} not found.`);
+    }
+});
+
 app.post('/item', (request, response) => {
     let name = request.body.name;
-    let item = {item: item};
+    let item = {name: name};
     items.push(item);
     response.send(`The item ${name} added.`);
 });
