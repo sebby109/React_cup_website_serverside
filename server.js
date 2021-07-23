@@ -39,6 +39,11 @@ app.post('/item', (request, response) => {
     response.send(`The item ${name} added.`);
 });
 
+app.get('/items', (request, response) => {
+    db.getItems()
+    .then(result => result.json())
+    .catch(e => console.log(e));
+});
 
 // start server
 app.listen(port, () => console.log('Listening on port ' + port));
