@@ -1,4 +1,4 @@
-// this is used to read info from .env file
+// this is used to read info from .env file. need to use npm install dotenv
 require('dotenv').config();
 const { Pool } = require ('pg');
 
@@ -22,7 +22,7 @@ const pool = new Pool(connection);
 
 let getItems = () => {
     // gets all of the items and their prices in the database.
-    return pool.query('select itemname, price from cups.items')
+    return pool.query('select itemname, price from cups.items;')
     .then(result => result)
     .catch(e => console.log(e));
 }
