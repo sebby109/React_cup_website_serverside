@@ -40,8 +40,9 @@ app.post('/item', (request, response) => {
 });
 
 app.get('/items', (request, response) => {
+    // let off here trying to debug
     db.getItems()
-    .then(() => response.json())
+    .then(() => alert("worked"))
     .catch(e => console.log(e));
 });
 
