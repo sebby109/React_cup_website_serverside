@@ -22,8 +22,8 @@ const pool = new Pool(connection);
 
 let getItems = () => {
     // gets all of the items and their prices in the database.
-    return pool.query('select itemname, price from cups.items;')
-    .then(result => result)
+    return pool.query('select itemname, price from cups.items')
+    .then(result => result.rows)
     .catch(e => console.log(e));
 }
 
