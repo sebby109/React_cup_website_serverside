@@ -41,7 +41,7 @@ app.post('/item', (request, response) => {
 
 app.get('/items', (request, response) => {
     db.getItems()
-    .then(result => result.json())
+    .then(result => result)
     .catch(e => console.log(e));
 });
 
