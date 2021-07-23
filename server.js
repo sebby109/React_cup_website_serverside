@@ -2,6 +2,8 @@
 const express = require('express');
 var cors = require('cors');
 const { response } = require('express');
+
+// this is syntax for importing in node.js 
 const db = require('./db');
 
 // create the server
@@ -17,13 +19,6 @@ let items = [{'name': 'cup1'}];
 
 app.get('/', (request, response) => {
     response.send('<h1>Cups server side.</h1>');
-});
-
-app.get('/add/:a/:b', (request, response) =>{
-    let a = request.params.a;
-    let b = request.params.b;
-    let sum = Number(a) + Number(b);
-    response.send(`${a} + ${b} = ${sum}`);
 });
 
 app.get('/item/:name', (request, response) => {

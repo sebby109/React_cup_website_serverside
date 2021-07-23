@@ -27,3 +27,5 @@ let getItems = () => {
     .catch(e => console.log(e));
 }
 
+// needed so other files can access. Node.js syntax for exporting.
+module.exports = { getItems }
