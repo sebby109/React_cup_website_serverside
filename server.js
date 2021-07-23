@@ -42,7 +42,7 @@ app.post('/item', (request, response) => {
 app.get('/items', (request, response) => {
     // let off here trying to debug
     db.getItems()
-    .then(() => response.json())
+    .then(response => response.json())
     .catch(e => console.log(e));
 });
 
