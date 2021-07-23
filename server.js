@@ -2,7 +2,7 @@
 const express = require('express');
 var cors = require('cors');
 const { response } = require('express');
-//const db = require('./db');
+const db = require('./db');
 
 // create the server
 const app = express();
