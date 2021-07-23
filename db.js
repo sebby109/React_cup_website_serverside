@@ -1,5 +1,5 @@
 // this is used to read info from .env file
-require('dotenv').config()
+require('dotenv').config();
 const { Pool } = require ('pg');
 
 // these variables are done for privacy.
