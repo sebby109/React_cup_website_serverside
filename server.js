@@ -40,7 +40,9 @@ app.post('/item', (request, response) => {
 });
 
 app.get('/items', (request, response) => {
-    response.json(items);
+    db.getItems()
+    .then(result => result.json())
+    .catch(e => console.log(e));
 });
 
 // start server
