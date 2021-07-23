@@ -1,7 +1,7 @@
 // dependencies
 const express = require('express');
 var cors = require('cors');
-const { response } = require('express');
+const { response, request } = require('express');
 
 // this is syntax for importing in node.js 
 const db = require('./db');
