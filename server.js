@@ -18,7 +18,7 @@ let items = [{'name': 'cup1'}];
 let cart_total = 0;
 
 app.get('/cart', (request, response){
-    response.send(response);
+    response.send(cart_total);
 });
 
 
