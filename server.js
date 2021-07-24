@@ -21,6 +21,13 @@ app.get('/cart', (request, response) => {
     response.json(cart_total);
 });
 
+app.post('/addCart', (request, response) => {
+    // used to save the number of items they added to the cart.
+    let count = request.body.count;
+    cart_total += count;
+    response.send(`${count} added to cart total.`)
+});
+
 app.get('/', (request, response) => {
     response.send('<h1>Cups server side.</h1>');
 });
