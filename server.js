@@ -17,10 +17,9 @@ app.use(cors());
 let items = [{'name': 'cup1'}];
 let cart_total = 0;
 
-app.get('/cart', (request, response){
+app.get('/cart', (request, response) => {
     response.send(cart_total);
 });
-
 
 app.get('/', (request, response) => {
     response.send('<h1>Cups server side.</h1>');
