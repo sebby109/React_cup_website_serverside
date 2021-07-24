@@ -15,6 +15,11 @@ app.use(express.json());
 app.use(cors());
 
 let items = [{'name': 'cup1'}];
+let cart_total = 0;
+
+app.get('/cart', (request, response){
+    response.send(response);
+});
 
 
 app.get('/', (request, response) => {
