@@ -40,7 +40,7 @@ app.post('/item', (request, response) => {
 });
 
 app.get('/items', (request, response) => {
-    // let off here trying to debug
+    // let off here. Fixed bug. had to be response.json( result in here)
     db.getItems()
     .then(result => response.json(result))
     .catch(e => console.log(e));
