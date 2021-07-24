@@ -18,6 +18,7 @@ let items = [{'name': 'cup1'}];
 let cart_total = 0;
 
 app.get('/cart', (request, response) => {
+    // gives us current cart number.
     response.json(cart_total);
 });
 
