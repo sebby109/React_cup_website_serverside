@@ -24,7 +24,8 @@ app.get('/cart', (request, response) => {
 app.get('/addCart/:count', (request, response) => {
     // used to save the number of items they added to the cart.
     let i = request.params.count;
-    response.send(`${i} added to cart total.`)
+    cart_total += i;
+    response.send(`${i} added to cart total. Cart total now ${cart_total}.`)
 });
 
 app.get('/', (request, response) => {
