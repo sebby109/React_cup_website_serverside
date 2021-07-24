@@ -24,7 +24,6 @@ app.get('/cart', (request, response) => {
 app.post('/addCart', (request, response) => {
     // used to save the number of items they added to the cart.
     let count = request.body.count;
-    cart_total += count;
     response.send(`${count} added to cart total.`)
 });
 
