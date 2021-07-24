@@ -22,11 +22,11 @@ app.get('/cart', (request, response) => {
     response.json(cart_total);
 });
 
-app.get('/addCart/:count', (request, response) => {
+app.post('/addCart', (request, response) => {
     // used to save the number of items they added to the cart.
-    let i = request.params.count;
+    let i = request.body.count;
     cart_total += Number(i);
-    response.json(cart_total);
+    response.send('Added to cart total.')
 });
 
 app.get('/', (request, response) => {
