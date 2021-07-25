@@ -23,8 +23,8 @@ app.get('/cart', (request, response) => {
 });
 
 app.post('/addCart', (request, response) => {
-    // used to save the number of items they added to the cart.
-    //let off here trying to fix null
+    // used to save the number of items they added to the cart. 
+    // had bug here but disappeared?
     let i = request.body.count;
     cart_total += Number(i);
     response.send(`${i}`)
