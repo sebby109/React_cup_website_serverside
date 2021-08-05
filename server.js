@@ -60,7 +60,7 @@ app.get('/items', (request, response) => {
 });
 
 app.get('/findItem', (request, response) => {
-    db.getItem()
+    db.getItem('1')
     .then(result => response.json(result))
     .catch(e => console.log(e));
 });
