@@ -59,5 +59,11 @@ app.get('/items', (request, response) => {
     .catch(e => console.log(e));
 });
 
+app.get('/findItem', (request, response) => {
+    db.getItem()
+    .then(result => response.json(result))
+    .catch(e => console.log(e));
+});
+
 // start server
 app.listen(port, () => console.log('Listening on port ' + port));
