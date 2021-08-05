@@ -30,7 +30,7 @@ let getItems = () => {
 let getItem = (id_num) => {
     return pool.query('select itemname, price from cups.items where itemid = $1', [id_num])
     .then(result => result.rows)
-    .catch(e => console.log(e);)
+    .catch(e => console.log(e));
 }
 
 // needed so other files can access. Node.js syntax for exporting.
