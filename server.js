@@ -14,8 +14,8 @@ const port = process.env.PORT || 4002;
 app.use(express.json());
 app.use(cors());
 
-let items = [{'name': 'cup1'}];
 let cart_total = 0;
+let temp_cart = [];
 
 app.get('/cart', (request, response) => {
     // gives us current cart number.
@@ -64,6 +64,18 @@ app.get('/findItem', (request, response) => {
     .then(result => response.json(result))
     .catch(e => console.log(e));
 });
+
+app.get('/getTemp', (request, response) =>{
+    response.send(temp_cart);
+});
+
+app.post('/addTemp', (request, response) => {
+
+    let id = request.body.id;
+    temp_cart.push(id);
+    response.send(`added`)
+});
+
 
 // start server
 app.listen(port, () => console.log('Listening on port ' + port));
