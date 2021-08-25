@@ -58,8 +58,8 @@ app.get('/items', (request, response) => {
     .catch(e => console.log(e));
 });
 
-app.get('/findItem', (request, response) => {
-    db.getItem('1')
+app.get('/findItem/:num', (request, response) => {
+    db.getItem(request.params.num)
     .then(result => response.json(result))
     .catch(e => console.log(e));
 });
