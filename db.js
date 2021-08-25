@@ -33,8 +33,8 @@ let getItem = (id_num) => {
     .catch(e => console.log(e));
 }
 
-let getCertainitems = (selected) => {
-    let i = 3;
+let getCertainitems = (selected, items_length) => {
+    let i = items_length;
     return i;
 }
 

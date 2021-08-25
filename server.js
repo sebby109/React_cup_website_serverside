@@ -75,10 +75,10 @@ app.post('/addTemp', (request, response) => {
     response.send(`added`);
 });
 
-app.get('/selection/:selections', (request, response)=> {
+app.get('/selection/:selections', (request, response) => {
     let items_picked = request.params.selections;
     let items_length = items_picked.length;
-    response.json(items_length);
+    response.json(items_picked);
 });
 
 // start server
