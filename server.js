@@ -77,11 +77,7 @@ app.post('/addTemp', (request, response) => {
 
 app.get('/selection/:selections', (request, response) => {
     let items_picked = request.params.selections;
-    items_picked.replace('[', '');
-    items_picked.replace(']', '');
-    let itemsArr = items_picked.split(',');
-    let items_length = items_picked.length;
-    response.json(itemsArr);
+    response.send(itemsArr);
 });
 
 // start server
