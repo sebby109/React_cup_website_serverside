@@ -33,10 +33,6 @@ let getItem = (id_num) => {
     .catch(e => console.log(e));
 }
 
-let getCertainitems = (selected, items_length) => {
-    let i = items_length;
-    return i;
-}
 
 // needed so other files can access. Node.js syntax for exporting.
-module.exports = { getItems, getItem, getCertainitems }
+module.exports = { getItems, getItem }

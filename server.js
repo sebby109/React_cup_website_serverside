@@ -75,10 +75,5 @@ app.post('/addTemp', (request, response) => {
     response.send(`added`);
 });
 
-app.get('/selection/:selections', (request, response) => {
-    let items_picked = request.params.selections;
-    response.send(items_picked);
-});
-
 // start server
 app.listen(port, () => console.log('Listening on port ' + port));
