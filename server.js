@@ -72,12 +72,14 @@ app.post('/addTemp', (request, response) => {
 
     let id = request.body.id;
     temp_cart.push(id);
-    response.send(`added`)
+    response.send(`added`);
 });
 
 app.get('/selection/:selections', (request, response)=> {
     let items_picked = request.params.selections;
-    
+    db.getCertainitems(items_picked)
+    .then(result => response.json(result))
+    .catch(e => console.log(e));
 });
 
 // start server

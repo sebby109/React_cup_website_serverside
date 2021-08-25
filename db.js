@@ -39,4 +39,4 @@ let getCertainitems = (selected) => {
 }
 
 // needed so other files can access. Node.js syntax for exporting.
-module.exports = { getItems, getItem }
+module.exports = { getItems, getItem, getCertainitems }
