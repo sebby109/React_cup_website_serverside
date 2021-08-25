@@ -75,8 +75,9 @@ app.post('/addTemp', (request, response) => {
     response.send(`added`)
 });
 
-app.get('/tester/:testing', (request, response)=> {
-    response.send(request.params.testing)
+app.get('/selection/:selections', (request, response)=> {
+    let items_picked = request.params.selections;
+    
 });
 
 // start server
