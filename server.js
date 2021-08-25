@@ -77,9 +77,8 @@ app.post('/addTemp', (request, response) => {
 
 app.get('/selection/:selections', (request, response)=> {
     let items_picked = request.params.selections;
-    db.getCertainitems(items_picked)
-    .then(result => response.json(result))
-    .catch(e => console.log(e));
+    let items_length = items_picked.length;
+    response.json(items_length);
 });
 
 // start server
