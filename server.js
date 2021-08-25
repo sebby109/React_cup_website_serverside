@@ -76,7 +76,10 @@ app.post('/addTemp', (request, response) => {
 });
 
 app.get('/selection/:selections', (request, response) => {
-    let items_picked = request.params.selections.split(',');
+    let items_picked = request.params.selections;
+    items_picked.replace('[', '');
+    items_picked.replace(']', '');
+    items_pickedsplit(',');
     let items_length = items_picked.length;
     response.json(items_picked);
 });
