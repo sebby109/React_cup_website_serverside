@@ -79,9 +79,9 @@ app.get('/selection/:selections', (request, response) => {
     let items_picked = request.params.selections;
     items_picked.replace('[', '');
     items_picked.replace(']', '');
-    items_picked.split(',');
+    let itemsArr = items_picked.split(',');
     let items_length = items_picked.length;
-    response.json(items_picked);
+    response.json(itemsArr);
 });
 
 // start server
