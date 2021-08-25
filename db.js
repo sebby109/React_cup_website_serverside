@@ -34,7 +34,7 @@ let getItem = (id_num) => {
 }
 
 let getCertainitems = (selected) => {
-    let i = selected.length;
+    let i = 3;
     return i;
 }
 
