@@ -53,7 +53,6 @@ app.post('/item', (request, response) => {
 });
 
 app.get('/items', (request, response) => {
-    // let off here. Fixed bug. had to be response.json( result in here)
     db.getItems()
     .then(result => response.json(result))
     .catch(e => console.log(e));
@@ -76,6 +75,9 @@ app.post('/addTemp', (request, response) => {
     response.send(`added`)
 });
 
+app.get('/tester/:testing', (request, response)=> {
+    response.send(request.params.testing)
+});
 
 // start server
 app.listen(port, () => console.log('Listening on port ' + port));
